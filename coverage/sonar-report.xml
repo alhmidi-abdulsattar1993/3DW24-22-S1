@@ -1,0 +1,21 @@
+<testExecutions version="1">
+<file path="tests/user.test.js">
+<testCase name="Test : Get all users responds with json" duration="359" />
+<testCase name="Test : Get a user with his id responds with json" duration="44" />
+<testCase name="Test : Create a user responds with json" duration="27" />
+<testCase name="Test : Update a user responds with json" duration="91">
+<failure message="Error"><![CDATA[Error: WHERE parameter &quot;firstname&quot; has invalid &quot;undefined&quot; value
+    at MySQLQueryGenerator.whereItemQuery (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2284:13)
+    at /home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2273:25
+    at Array.forEach (&lt;anonymous&gt;)
+    at MySQLQueryGenerator.whereItemsQuery (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2271:35)
+    at MySQLQueryGenerator.getWhereConditions (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2689:19)
+    at MySQLQueryGenerator.selectQuery (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1348:28)
+    at MySQLQueryInterface.select (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/dialects/abstract/query-interface.js:954:27)
+    at Function.findAll (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/model.js:1754:47)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at Function.findOne (/home/vagrant/UE3DW_S1/node_modules/sequelize/lib/model.js:1918:12)]]></failure>
+</testCase>
+<testCase name="Test : Delete a user responds with json" duration="25" />
+</file>
+</testExecutions>
