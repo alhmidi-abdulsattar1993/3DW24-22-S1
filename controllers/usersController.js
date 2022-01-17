@@ -23,12 +23,8 @@ module.exports.findOrCreate = async function(req, res){
 			        }
 	});
 	res.status(200).json({
-		            'created': 'User created'
+        message :'User created'
 		        }) // The boolean indicating whether this instance was just created
-	    if (created) {
-		            console.log(user.job); // This will certainly be 'Technical Lead JavaScript'
-		        }
-	
 };
 
 
@@ -46,7 +42,9 @@ module.exports.updateUser = async function(req, res) {
 	    models.User.update({
 		   firstname: req.params.firstname,
 		   lastname: req.params.lastname
-		        }, { where: { id: req.params.id }  }).then(function() {
+		        }, { where: { id: req.params.id }  }).then(function(user) {
 			     res.status(200).json({ message: "user updated" });
 	        });
 };
+
+
